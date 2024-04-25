@@ -1,13 +1,14 @@
-name: Release
+name: Release - Semantic
 on:
-  repository_dispatch:
+  #repository_dispatch:
     # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GH_TOKEN}"
     # https://api.github.com/repos/Aetherinox/marked-alert-fa/dispatches -d '{ "event_type": "semantic-release" }'
-    types: [multi-semantic-release]
-  push:
-    branches:
-      - main
-      - '*.x'
+    #types: [multi-semantic-release]
+  workflow_dispatch:
+  #push:
+  #  branches:
+  #    - main
+  #    - '*.x'
 
 jobs:
   release:
