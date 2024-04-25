@@ -136,8 +136,8 @@ jobs:
 
         - name: "📦 NPM Actions"
           run: |
-            npm install
-            npm publish
+            npm install --workspaces --if-present
+            npm publish --workspaces --if-present
           env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -166,8 +166,8 @@ jobs:
 
         - name: "📦 NPM Actions"
           run: |
-            npm install
-            npm publish
+            npm install --workspaces --if-present
+            npm publish --workspaces --if-present
           env:
             NODE_AUTH_TOKEN: ${{ secrets.SELF_TOKEN_CL }}
 
@@ -216,7 +216,7 @@ jobs:
             - name: "🪪 Install Dependencies"
               id: task_release_npm_install
               run: |
-                npm install
+                npm install --workspaces --if-present
 
             # ---------------------------------------------------------------------------------------
             #   Dist Releases > Run pretty and lint
