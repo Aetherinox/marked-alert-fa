@@ -1,6 +1,6 @@
 {
     "name": "@aetherinox/marked-alert-base",
-    "version": "0.0.0-development",
+    "version": "1.0.0",
     "description": "Marked extension which displays Github-like alerts with font-awesome 6",
     "private": true,
     "homepage": "https://github.com/Aetherinox/marked-alert-fa",
@@ -50,7 +50,13 @@
       "lint": "npm run lint --workspaces --if-present",
       "format": "npm run format --workspaces --if-present",
       "contrib:add": "all-contributors add",
-      "contrib:generate": "all-contributors generate"
+      "contrib:generate": "all-contributors generate",
+      "maf": "node maf.js",
+      "maf:generate": "node maf.js generate",
+      "env-maf": "npx --quiet env-cmd --no-override node maf.js",
+      "env-uuid": "npx --quiet env-cmd --no-override node maf.js uuid",
+      "env-guid": "npx --quiet env-cmd --no-override node maf.js guid",
+      "env-version": "node -p require('./package.json').version;"
     },
     "devDependencies": {
       "@types/babel__core": "^7.20.5",
