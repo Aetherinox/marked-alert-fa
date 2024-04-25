@@ -76,7 +76,7 @@ jobs:
             - name: "📂 Get NPM Cache Directory"
               id: task_tests_npm_cache_dir_get
               run: |
-                  echo "::set-output name=dir::$(npm config get cache)"
+                  echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
 
             # ---------------------------------------------------------------------------------------
             #   Job > Tests > NPM Cache
