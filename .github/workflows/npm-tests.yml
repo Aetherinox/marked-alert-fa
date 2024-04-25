@@ -128,7 +128,7 @@ jobs:
               uses: codecov/codecov-action@v4
               with:
                   token: ${{ secrets.CODECOV_TOKEN }}
-                  slug: Aetherinox/noxenv
+                  slug: Aetherinox/marked-alert-fa
                   env_vars: CI_OS,NODE_VERSION
               env:
                   CI_OS: ${{ matrix.os }}
