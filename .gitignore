@@ -2,6 +2,7 @@ coverage
 dist
 .opt-*
 node_modules
+.nyc_output
 
 # Package Locks
 yarn.lock

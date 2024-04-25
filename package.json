@@ -44,9 +44,13 @@
       "build": "npm run build --workspaces --if-present",
       "test": "npm test --workspaces --if-present",
       "coverage": "npm run coverage --workspaces --if-present",
+      "coverage:legacy": "nyc --reporter=lcov --reporter=text npm run test --workspaces --if-present",
+      "coverage:report": "nyc report --reporter=lcov --reporter=text",
       "types": "npm run types --workspaces --if-present",
       "lint": "npm run lint --workspaces --if-present",
-      "format": "npm run format --workspaces --if-present"
+      "format": "npm run format --workspaces --if-present",
+      "contrib:add": "all-contributors add",
+      "contrib:generate": "all-contributors generate"
     },
     "devDependencies": {
       "@types/babel__core": "^7.20.5",
@@ -60,7 +64,11 @@
       "pupa": "^3.1.0",
       "react-dom": "^18.2.0",
       "vite-plugin-cachedir": "^1.2.0",
-      "vite-plugin-resolve-umd-format": "^1.0.0"
+      "vite-plugin-resolve-umd-format": "^1.0.0",
+      "nyc": "^15.1.0",
+      "prettier": "^3.2.5",
+      "all-contributors-cli": "^6.26.1",
+      "@types/uuid": "^9.0.8"
     },
     "config": {
       "commitizen": {
