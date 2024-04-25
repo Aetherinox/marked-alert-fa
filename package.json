@@ -1,0 +1,77 @@
+{
+    "name": "@aetherinox/marked-alert-fa",
+    "version": "0.0.0-development",
+    "description": "Marked extension which displays Github-like alerts with font-awesome 6",
+    "homepage": "https://github.com/Aetherinox/marked-alert-fa",
+    "author": "Aetherinox <adminservx@proton.me>",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Aetherinox",
+            "email": "adminservx@proton.me",
+            "url": "https://github.com/Aetherinox"
+        },
+        {
+            "name": "AdminServ",
+            "email": "adminservx@proton.me",
+            "url": "https://github.com/AdminServ"
+        },
+        {
+            "name": "Beni Arisandi",
+            "url": "https://stilearning.com"
+        }
+    ],
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aetherinox/marked-alert-fa.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Aetherinox/marked-alert-fa/issues"
+    },
+    "keywords": [
+        "marked",
+        "extensions",
+        "plugins",
+        "markdown",
+        "gfm"
+    ],
+    "workspaces": [
+      "packages/*"
+    ],
+    "scripts": {
+      "dev": "npm run dev --workspaces --if-present",
+      "build": "npm run build --workspaces --if-present",
+      "test": "npm test --workspaces --if-present",
+      "coverage": "npm run coverage --workspaces --if-present",
+      "types": "npm run types --workspaces --if-present",
+      "lint": "npm run lint --workspaces --if-present",
+      "format": "npm run format --workspaces --if-present"
+    },
+    "devDependencies": {
+      "@types/babel__core": "^7.20.5",
+      "@types/common-ancestor-path": "^1.0.2",
+      "@types/moo": "^0.5.9",
+      "@types/react-dom": "^18.2.25",
+      "@types/set-value": "^4.0.3",
+      "doogu": "^3.2.13",
+      "marked": "^12.0.2",
+      "prettier-plugin-svelte": "^3.2.3",
+      "pupa": "^3.1.0",
+      "react-dom": "^18.2.0",
+      "vite-plugin-cachedir": "^1.2.0",
+      "vite-plugin-resolve-umd-format": "^1.0.0"
+    },
+    "config": {
+      "commitizen": {
+        "path": "cz-conventional-changelog"
+      }
+    },
+    "eslintConfig": {
+      "extends": "./node_modules/doogu/eslint"
+    },
+    "prettier": "doogu/prettier.json",
+    "release": {
+      "extends": "doogu/release.config.js"
+    }
+}
