@@ -42,21 +42,21 @@
 <!-- prettier-ignore-start -->
 [link-npm]: https://npmjs.com
 [link-node]: https://nodejs.org
-[link-npmtrends]: http://npmtrends.com/keeweb
-[link-license]: https://github.com/Aetherinox/keeweb/blob/master/LICENSE
-[link-package]: https://npmjs.com/package/Aetherinox/keeweb
-[link-coverage]: https://codecov.io/github/Aetherinox/keeweb
-[link-build]: https://github.com/Aetherinox/keeweb/actions/workflows/build.yaml?query=workflow%3Abuild.yml
-[link-tests]: https://github.com/Aetherinox/keeweb/actions/workflows/tests.yaml?query=workflow%3Atests.yml
+[link-npmtrends]: http://npmtrends.com/marked-alert-fa
+[link-license]: https://github.com/Aetherinox/marked-alert-fa/blob/master/LICENSE
+[link-package]: https://npmjs.com/package/Aetherinox/marked-alert-fa
+[link-coverage]: https://codecov.io/github/Aetherinox/marked-alert-fa
+[link-build]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/build.yaml?query=workflow%3Abuild.yml
+[link-tests]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/tests.yaml?query=workflow%3Atests.yml
 
-[badge-commit]: https://img.shields.io/github/last-commit/Aetherinox/keeweb?color=b43bcc
-[badge-size]: https://img.shields.io/github/repo-size/Aetherinox/keeweb?label=size&color=59702a
-[badge-build]: https://img.shields.io/github/actions/workflow/status/Aetherinox/keeweb/build.yml?logo=github&label=Build&color=%23278b30
-[badge-tests]: https://img.shields.io/github/actions/workflow/status/Aetherinox/keeweb/tests.yml?logo=github&label=Tests&color=%23278b30
-[badge-coverage]: https://img.shields.io/codecov/c/github/Aetherinox/keeweb?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
-[badge-version]: https://img.shields.io/npm/v/keeweb/keeweb
-[badge-downloads]: https://img.shields.io/npm/dm/keeweb.svg
-[badge-license]: https://img.shields.io/npm/l/keeweb.svg
+[badge-commit]: https://img.shields.io/github/last-commit/Aetherinox/marked-alert-fa?color=b43bcc
+[badge-size]: https://img.shields.io/github/repo-size/Aetherinox/marked-alert-fa?label=size&color=59702a
+[badge-build]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/build.yml?logo=github&label=Build&color=%23278b30
+[badge-tests]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/tests.yml?logo=github&label=Tests&color=%23278b30
+[badge-coverage]: https://img.shields.io/codecov/c/github/Aetherinox/marked-alert-fa?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
+[badge-version]: https://img.shields.io/npm/v/Aetherinox/marked-alert-fa
+[badge-downloads]: https://img.shields.io/npm/dm/marked-alert-fa.svg
+[badge-license]: https://img.shields.io/npm/l/marked-alert-fa.svg
 [all-contributors]: https://github.com/all-contributors/all-contributors
-[all-contributors-badge]: https://img.shields.io/github/all-contributors/Aetherinox/keeweb?color=de1f6f&label=contributors
+[all-contributors-badge]: https://img.shields.io/github/all-contributors/Aetherinox/marked-alert-fa?color=de1f6f&label=contributors
 <!-- prettier-ignore-end -->
