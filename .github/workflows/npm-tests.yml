@@ -75,6 +75,7 @@ jobs:
 
             - name: "📂 Get NPM Cache Directory"
               id: task_tests_npm_cache_dir_get
+              shell: bash
               run: |
                   echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
 
