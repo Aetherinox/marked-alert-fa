@@ -10,7 +10,7 @@ on:
 
     pull_request:
     workflow_dispatch:
-  
+
 jobs:
     job-tests-run:
         name: >-
@@ -107,7 +107,6 @@ jobs:
             - name: "📦 NPM › Pretty & Linter"
               id: task_tests_npm_prettylint
               run: |
-                npm run pretty
                 npm run lint
 
             # ---------------------------------------------------------------------------------------

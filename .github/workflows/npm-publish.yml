@@ -82,7 +82,7 @@ jobs:
 
             - name: "✅ Start"
               id: task_initialize_start
-              run: | 
+              run: |
                     echo "Starting build"
 
             # ---------------------------------------------------------------------------------------
@@ -216,8 +216,8 @@ jobs:
             - name: "🪪 Install Dependencies"
               id: task_release_npm_install
               run: |
-                npm install 
-                
+                npm install
+
             # ---------------------------------------------------------------------------------------
             #   Dist Releases > Run pretty and lint
             # ---------------------------------------------------------------------------------------
@@ -225,7 +225,6 @@ jobs:
             - name: "🪪 Run Pretty & Linter"
               id: task_release_npm_prettylint
               run: |
-                npm run pretty
                 npm run lint
 
             # ---------------------------------------------------------------------------------------
@@ -509,7 +508,7 @@ jobs:
             - name: "🎛️ Status › Print"
               run: |
                 echo "Printing Variables"
-                echo 
+                echo
                 echo "---- CHANGELOG ---------------------------------------------------------------"
                 echo "${{ steps.task_release_changelog_categorized.outputs.changelog }}"
                 echo "${{ steps.task_changelog_uncategorized.outputs.changelog }}"
