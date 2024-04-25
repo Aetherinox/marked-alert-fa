@@ -120,7 +120,7 @@ jobs:
             - name: "🪪 Generate IDs"
               id: task_release_npm_env_generate
               run: |
-                npm run env-generate
+                npm run maf:generate
 
             # ---------------------------------------------------------------------------------------
             #   Get guid and uuid from env variable
