@@ -109,6 +109,7 @@ jobs:
               id: task_tests_npm_prettylint
               run: |
                 npm run lint
+                npm run coverage
 
             # ---------------------------------------------------------------------------------------
             #   Job > Tests > Run Validation Script
