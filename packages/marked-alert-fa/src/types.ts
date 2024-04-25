@@ -1,7 +1,7 @@
 import { Token } from 'marked'
 
 /**
- * Options for the `markedAlert` extension.
+ * Options for the `markedAlertFa` extension.
  */
 export interface Options {
   className?: string

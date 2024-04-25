@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'markedAlert',
+      name: 'markedAlertFa',
       formats: ['es', 'cjs', 'umd'],
       fileName: 'index'
     },

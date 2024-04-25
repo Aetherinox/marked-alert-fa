@@ -7,7 +7,7 @@ export type { Alert, AlertVariantItem, Options }
 /**
  * A [marked](https://marked.js.org/) extension to support [GFM alerts](https://github.com/orgs/community/discussions/16925).
  */
-export default function markedAlert(options: Options = {}): MarkedExtension {
+export default function markedAlertFa(options: Options = {}): MarkedExtension {
   const { className = 'markdown-alert', variants = [] } = options
   const resolvedVariants = resolveVariants(variants)
 

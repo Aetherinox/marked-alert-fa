@@ -2,18 +2,18 @@
 
 import { readFileSync } from 'node:fs'
 import { marked } from 'marked'
-import markedAlert from '../src/index.js'
+import markedAlertFa from '../src/index.js'
 
 it('should render default alerts', () => {
   const md = readFileSync('test/fixtures/base.md', 'utf8')
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchSnapshot()
 })
 
 it('should parse first-line content correctly', () => {
   const md = '> [!NOTE]\n> This is a `note`!\n'
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchInlineSnapshot(`
     "<div class="markdown-alert markdown-alert-note"><i class="fa fa-note-sticky"></i>
@@ -26,7 +26,7 @@ it('should parse first-line content correctly', () => {
 
 it('should render an alert with custom class name', () => {
   const md = '> [!TIP]\n> This is a `tip`!\n'
-  const html = marked.use(markedAlert({ className: 'foo' })).parse(md)
+  const html = marked.use(markedAlertFa({ className: 'foo' })).parse(md)
 
   expect(html).toMatchInlineSnapshot(`
     "<div class="foo foo-tip"><i class="fa fa-lightbulb"></i>
@@ -41,7 +41,7 @@ it('should render an alert with custom variant', () => {
   const md = '> [!DANGER]\nThis is a custom alert!\n'
   const html = marked
     .use(
-      markedAlert({
+      markedAlertFa({
         variants: [{ type: 'danger', icon: 'calendar' }]
       })
     )
@@ -60,7 +60,7 @@ it('should render an alert with custom variant title', () => {
   const md = '> [!DANGER]\nThis is a custom alert!\n'
   const html = marked
     .use(
-      markedAlert({
+      markedAlertFa({
         variants: [
           { type: 'danger', icon: 'helmet', title: 'Oh snap!' }
         ]
@@ -81,7 +81,7 @@ it('should render an alert with custom variant titleClassName', () => {
   const md = '> [!NOTE]\nI bought it on ebay\n'
   const html = marked
     .use(
-      markedAlert({
+      markedAlertFa({
         variants: [
           {
             type: 'note',
@@ -110,7 +110,7 @@ it('should render alert with blockquote', () => {
 >
 > This is a warning
 `
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchInlineSnapshot(`
     "<div class="markdown-alert markdown-alert-warning"><i class="fa fa-triangle-exclamation"></i>
@@ -131,7 +131,7 @@ it('should render alert inside blockquote', () => {
 > > [!CAUTION]
 > > Caution inside
 `
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchInlineSnapshot(`
     "<blockquote>
@@ -152,7 +152,7 @@ it('should render nested alert', () => {
 > > [!IMPORTANT]
 > > This is an important alert
 `
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchInlineSnapshot(`
     "<div class="markdown-alert markdown-alert-note"><i class="fa fa-note-sticky"></i>
@@ -169,7 +169,7 @@ it('should render nested alert', () => {
 
 it('should render complex alerts', () => {
   const md = readFileSync('test/fixtures/complex.md', 'utf8')
-  const html = marked.use(markedAlert()).parse(md)
+  const html = marked.use(markedAlertFa()).parse(md)
 
   expect(html).toMatchSnapshot()
 })
