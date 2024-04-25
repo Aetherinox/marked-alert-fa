@@ -115,7 +115,7 @@ jobs:
 
             - name: "▶️ Run Build"
               run: |
-                npm run validate
+                npm run build
 
             # ---------------------------------------------------------------------------------------
             #   Job > Tests > Upload Coverage to Codecov
