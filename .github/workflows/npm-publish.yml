@@ -7,13 +7,13 @@ on:
 
       # ---------------------------------------------------------------------------------------
       #   Name of the plugin to use when creating the release zip filename
-      #     e.g: noxenv-v1.0.0.zip
+      #     e.g: marked-alert-fa-v1.0.0.zip
       # ---------------------------------------------------------------------------------------
 
       PLUGIN_NAME:
         description:  "📦 Name of Plugin"
         required:     true
-        default:      'noxenv'
+        default:      'marked-alert-fa'
         type:         string
 
       # ---------------------------------------------------------------------------------------
@@ -54,11 +54,11 @@ on:
       # ---------------------------------------------------------------------------------------
       #   Release Candidate version number
       #   this will be added to the end of your released app in the releases page.
-      #     e.g: noxenv-v1.0.0-rc.1
+      #     e.g: marked-alert-fa-v1.0.0-rc.1
       # ---------------------------------------------------------------------------------------
 
       VERSION_RC:
-        description:  "🧪 RC (Pre-release) Ver (noxenv-rc.v1)"
+        description:  "🧪 RC (Pre-release) Ver (marked-alert-fa-rc.v1)"
         required:     false
         type:         string
         default:      "1"
