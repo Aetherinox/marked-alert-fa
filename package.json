@@ -1,7 +1,8 @@
 {
-    "name": "@aetherinox/marked-alert-fa",
+    "name": "@aetherinox/marked-alert-base",
     "version": "0.0.0-development",
     "description": "Marked extension which displays Github-like alerts with font-awesome 6",
+    "private": true,
     "homepage": "https://github.com/Aetherinox/marked-alert-fa",
     "author": "Aetherinox <adminservx@proton.me>",
     "license": "MIT",
@@ -21,7 +22,6 @@
             "url": "https://stilearning.com"
         }
     ],
-    "private": true,
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Aetherinox/marked-alert-fa.git"
