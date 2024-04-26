@@ -90,7 +90,7 @@ jobs:
 
         - name: "📦 NPM Actions"
           run: |
-            npm install --workspaces --if-present
+            npm install
 
         - name: "List 1"
           id: task_initialize_package_getversion
