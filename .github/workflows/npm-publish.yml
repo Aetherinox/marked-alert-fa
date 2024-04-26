@@ -110,5 +110,5 @@ jobs:
         - name: "List 2"
           id: task_initialize_package_ls_second
           run: |
-            ls /packages
-            ls /packages/dist
+            ls packages
+            ls packages/dist
