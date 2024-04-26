@@ -92,7 +92,7 @@ jobs:
           run: |
             npm install --workspaces --if-present
 
-        - name: "👁️‍🗨️ Get Package Version"
+        - name: "List 1"
           id: task_initialize_package_getversion
           run: |
             ls
@@ -103,7 +103,7 @@ jobs:
           env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-        - name: "👁️‍🗨️ Get Package Version"
-          id: task_initialize_package_getversion
+        - name: "List 2"
+          id: task_initialize_package_ls_second
           run: |
             ls dist/
