@@ -65,6 +65,51 @@ on:
 
 jobs:
 
+    # ---------------------------------------------------------------------------------------
+    #   JOB > INITIALIZE
+    # ---------------------------------------------------------------------------------------
+
+    job-initialize:
+        name: >-
+          📦 Publish › Initialize
+        runs-on: ubuntu-latest
+        outputs:
+          package_version: ${{ steps.task_initialize_package_getversion.outputs.PACKAGE_VERSION }}
+        permissions:
+            contents: write
+            packages: write
+        steps:
+
+            - name: "✅ Start"
+              id: task_initialize_start
+              run: |
+                    echo "Starting build"
+
+            # ---------------------------------------------------------------------------------------
+            #   Job > Initialize > Checkout
+            # ---------------------------------------------------------------------------------------
+
+            - name: "☑️ Checkout"
+              id: task_initialize_checkout
+              uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+
+            # ---------------------------------------------------------------------------------------
+            #   Get version from package.json VERSION value
+            # ---------------------------------------------------------------------------------------
+
+            - name: "👁️‍🗨️ Get Package Version"
+              id: task_initialize_package_getversion
+              run: |
+                VER=$(cat package.json | jq -r '.version')
+                echo "PACKAGE_VERSION=$VER" >> $GITHUB_OUTPUT
+
+            - name: "👁️‍🗨️ Get Package Version › Print"
+              id: task_initialize_package_getversion_debug
+              run: |
+                echo "VERSION: ${{ env.PACKAGE_VERSION }}"
+
     job-release:
         name: >-
           📦 Publish › Release
