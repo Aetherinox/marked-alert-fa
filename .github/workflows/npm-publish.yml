@@ -110,4 +110,4 @@ jobs:
         - name: "List 2"
           id: task_initialize_package_ls_second
           run: |
-            ls dist/
+            ls /dist
