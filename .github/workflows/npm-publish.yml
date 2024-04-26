@@ -102,7 +102,7 @@ jobs:
             - name: "👁️‍🗨️ Get Package Version"
               id: task_initialize_package_getversion
               run: |
-                VER=$(cat package.json | jq -r '.version')
+                VER=$(cat packages/marked-alert-fa/package.json | jq -r '.version')
                 echo "PACKAGE_VERSION=$VER" >> $GITHUB_OUTPUT
 
             - name: "👁️‍🗨️ Get Package Version › Print"
