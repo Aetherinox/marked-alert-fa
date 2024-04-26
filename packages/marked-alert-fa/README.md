@@ -134,7 +134,7 @@ Within your `.js` file, utilize something similar to:
 ```js
 import { readFileSync } from 'node:fs'
 import { Marked } from 'marked'
-import markedAlert from 'marked-alert'
+import markedAlertFa from '@aetherinox/marked-alert-fa';
 
 const html = new Marked()
   .use(markedAlertFa())
@@ -177,7 +177,7 @@ You can also include `setOptions` and define other extensions, and call `parse()
 
 ```js
 import { Marked } from 'marked';
-import markedAlertFa from 'marked-alert-fa';
+import markedAlertFa from '@aetherinox/marked-alert-fa';
 
   const html = new Marked()
       .setOptions({
