@@ -16,6 +16,7 @@ export type AlertVariantItem = {
   icon: string
   title?: string
   titleClassName?: string
+  bodyClassName?: string
 }
 
 /**
@@ -29,6 +30,7 @@ export type Alert = {
     icon: string
     title: string
     titleClassName: string
+    bodyClassName: string
   }
   raw: string
   text: string
