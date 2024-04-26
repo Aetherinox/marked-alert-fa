@@ -107,7 +107,9 @@ jobs:
         - name: "List Package"
           id: task_initialize_package_list
           run: |
-            ls -R
+            find . -type f ! -path './node_modules/*' \
+                | xargs stat --printf="%y %n\n" \
+                | sort -n
 
         - name: "📦 Publish: Live"
           run: |
