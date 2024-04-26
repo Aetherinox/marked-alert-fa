@@ -202,7 +202,10 @@ jobs:
               if: ${{ startsWith( inputs.PRERELEASE, false ) }}
               run: |
                   echo Building STABLE Package .zip PACKAGE_VERSION
-                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip package.json README.md LICENSE packages/marked-alert-fa/dist
+                  cd packages/marked-alert-fa
+                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip *
+                  cd ../../
+                  zip -jr ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip README.md LICENSE
                   ls
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.ADMINSERV_TOKEN_CL }}
