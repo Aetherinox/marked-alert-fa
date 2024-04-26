@@ -88,7 +88,11 @@ jobs:
             always-auth: true
             scope: '@aetherinox'
 
-        - name: "📦 NPM Actions"
+        - name: "📦 NPM: Install"
+          run: |
+            npm install
+
+        - name: "📦 NPM: Build"
           run: |
             npm run build
           env:
