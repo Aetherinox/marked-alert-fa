@@ -96,3 +96,14 @@ jobs:
           id: task_initialize_package_getversion
           run: |
             ls
+
+        - name: "📦 Dry"
+          run: |
+            npm publish --workspaces --if-present --dry-run
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+        - name: "👁️‍🗨️ Get Package Version"
+          id: task_initialize_package_getversion
+          run: |
+            ls dist/
