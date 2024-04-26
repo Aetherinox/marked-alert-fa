@@ -1,6 +1,6 @@
 {
     "name": "@aetherinox/marked-alert-fa",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Marked extension which displays Github-like alerts with font-awesome 6",
     "publishConfig": {
       "access": "public"
