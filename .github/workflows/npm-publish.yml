@@ -107,7 +107,7 @@ jobs:
         - name: "List Package"
           id: task_initialize_package_list
           run: |
-            find . -type f ! -path './node_modules/*' \
+            find . -type f ! -path './node_modules/*' ! -path './.git/*' \
                 | xargs stat --printf="%y %n\n" \
                 | sort -n
 
