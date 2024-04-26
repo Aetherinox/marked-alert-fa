@@ -90,25 +90,23 @@ jobs:
 
         - name: "📦 NPM Actions"
           run: |
-            npm install
-
-        - name: "📦 NPM Actions"
-          run: |
             npm run build
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-        - name: "List 1"
-          id: task_initialize_package_getversion
-          run: |
-            ls
-
-        - name: "📦 Dry"
+        - name: "📦 Publish: Dry Run"
           run: |
             npm publish --workspaces --if-present --dry-run
           env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-        - name: "List 2"
-          id: task_initialize_package_ls_second
+        - name: "List Package"
+          id: task_initialize_package_list
           run: |
-            ls packages
-            ls packages/dist
+            ls -R
+
+        - name: "📦 Publish: Live"
+          run: |
+            npm publish --workspaces --if-present --dry-run
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
