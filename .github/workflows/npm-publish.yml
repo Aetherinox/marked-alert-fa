@@ -71,10 +71,6 @@ jobs:
         runs-on: ubuntu-latest
         env:
           PACKAGE_VERSION: ${{ needs.job-initialize.outputs.package_version }}
-        if: |
-          always()
-          && contains(needs.*.result, 'success')
-          && !contains(needs.*.result, 'failure')
         permissions:
             contents: write
             packages: write
