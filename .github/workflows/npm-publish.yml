@@ -99,13 +99,13 @@ jobs:
             #   Get version from package.json VERSION value
             # ---------------------------------------------------------------------------------------
 
-            - name: "👁️‍🗨️ Get Package Version"
+            - name: "👁️‍🗨️ Package Version › Set"
               id: task_initialize_package_getversion
               run: |
                 VER=$(cat package.json | jq -r '.version')
                 echo "PACKAGE_VERSION=$VER" >> $GITHUB_OUTPUT
 
-            - name: "👁️‍🗨️ Get Package Version › Print"
+            - name: "👁️‍🗨️ Package Version › Get"
               id: task_initialize_package_getversion_debug
               run: |
                 echo "VERSION: ${{ steps.task_initialize_package_getversion.outputs.PACKAGE_VERSION }}"
@@ -196,19 +196,19 @@ jobs:
             registry-url: https://npm.pkg.github.com/
             scope: '@aetherinox'
 
-        - name: "🎚️ NPM: Install"
+        - name: "🎚️ NPM › Install"
           id: task_gpr_install
           run: |
             npm install
 
-        - name: "🪛 NPM: Build"
+        - name: "🪛 NPM › Build"
           id: task_gpr_build
           run: |
             npm run build
           env:
             NODE_AUTH_TOKEN: ${{ secrets.SELF_TOKEN_CL }}
 
-        - name: "🧪 Publish: Dry Run"
+        - name: "🧪 Publish › Dry Run"
           id: task_gpr_publish_run_dry
           run: |
             npm publish --workspaces --if-present --dry-run
@@ -222,7 +222,7 @@ jobs:
                 | xargs stat --printf="%y %n\n" \
                 | sort -n
 
-        - name: "📦 Publish: Live"
+        - name: "📦 Publish › Live"
           id: task_gpr_publish_run_live
           run: |
             npm publish --workspaces --if-present
@@ -396,8 +396,12 @@ jobs:
                 echo "FILE_ZIP=${filename_zip}" >> $GITHUB_ENV
                 echo "SHA256SUM=${sha256}" >> $GITHUB_ENV
 
+            # ---------------------------------------------------------------------------------------
+            #   Checksum > Print
+            # ---------------------------------------------------------------------------------------
+
             - name: "🆔 Checksum › Print"
-              id: task_release_checksum_st_get
+              id: task_release_checksum_print
               run: |
                 echo ${{ env.SHA256SUM }}
 
@@ -500,11 +504,13 @@ jobs:
             # ---------------------------------------------------------------------------------------
 
             - name: "📝 Changelog › Print (Categorized)"
+              id: task_release_changelog_print_categorized
               if: ${{ startsWith( inputs.SHOW_UNCATEGORIZED, false ) }}
               run: |
                 echo "${{ steps.task_release_changelog_categorized.outputs.changelog }}"
 
             - name: "📝 Changelog › Print (Uncategorized)"
+              id: task_release_changelog_print_uncategorized
               if: ${{ startsWith( inputs.SHOW_UNCATEGORIZED, true ) }}
               run: |
                 echo "${{ steps.task_release_changelog_uncategorized.outputs.changelog }}"
@@ -519,9 +525,9 @@ jobs:
             # ---------------------------------------------------------------------------------------
 
             - name: "🏳️ Post › Stable"
+              id: task_release_bundle_st
               if: ${{ startsWith( inputs.PRERELEASE, false ) }}
               uses: softprops/action-gh-release@v2
-              id: task_release_bundle_st
               env:
                 GITHUB_TOKEN: ${{ secrets.ADMINSERV_TOKEN_CL }}
               with:
@@ -540,9 +546,9 @@ jobs:
                   ${{ steps.task_release_changelog_uncategorized.outputs.changelog }}
 
             - name: "🏳️ Post › Release Candidate"
+              id: task_release_bundle_rc
               if: ${{ startsWith( inputs.PRERELEASE, true ) }}
               uses: softprops/action-gh-release@v2
-              id: task_release_bundle_rc
               env:
                 GITHUB_TOKEN: ${{ secrets.ADMINSERV_TOKEN }}
               with:
@@ -568,12 +574,13 @@ jobs:
             # ---------------------------------------------------------------------------------------
 
             - name: "🎛️ Status › Print"
+              id: task_release_status_print
               run: |
                 echo "Printing Variables"
                 echo
                 echo "---- CHANGELOG ---------------------------------------------------------------"
                 echo "${{ steps.task_release_changelog_categorized.outputs.changelog }}"
-                echo "${{ steps.task_changelog_uncategorized.outputs.changelog }}"
+                echo "${{ steps.task_release_changelog_uncategorized.outputs.changelog }}"
                 echo "---- CHANGELOG ---------------------------------------------------------------"
                 echo ""
                 echo ""
