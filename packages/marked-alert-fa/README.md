@@ -9,8 +9,8 @@
 [![Test Status][badge-tests]][link-tests]
 [![Code Coverage][badge-coverage]][link-coverage]
 [![Last Commit][badge-commit]][badge-commit]
-[![Size][badge-size]][badge-size]
-[![All Contributors][all-contributors-badge]](#contributors-)
+[![Size][badge-size-gh]][badge-size-gh]
+[![All Contributors][badge-all-contributors]](#contributors-)
 <!-- prettier-ignore-end -->
 
 </div>
@@ -55,7 +55,8 @@ The following icons are utilized by default:
 - [Options](#options)
   - [Default Alert Variants](#default-alert-variants)
 - [Updates](#updates)
-- [Related](#related)
+- [Related Packages:](#related-packages)
+- [Contributors ✨](#contributors-)
 
 <br />
 
@@ -283,8 +284,65 @@ This was originally developed for one software title. If others find it useful, 
 
 <br />
 
-## Related
-See [extensions list](https://github.com/bent10/marked-extensions#packages).
+## Related Packages:
+- [MarkedJS](https://github.com/markedjs/marked)
+- [Marked-Alert](https://www.npmjs.com/package/marked-alert)
+- [Marked Extensions List](https://github.com/bent10/marked-extensions#packages)
+
+<br />
+
+---
+
+<br />
+
+## Contributors ✨
+We are always looking for contributors. If you feel that you can provide something useful to this package, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
+
+- [Pull Request Procedure](https://github.com/Aetherinox/marked-alert-fa/tree/main/.github/PULL_REQUEST_TEMPLATE.md)
+- [Contributor Policy](CONTRIBUTING.md)
+
+<br />
+
+Want to help but can't write code?
+- Review [active questions by our community](https://github.com/Aetherinox/marked-alert-fa/labels/help%20wanted) and answer the ones you know.
+
+<br />
+
+The following people have helped get this project going:
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![Contributors][badge-all-contributors]](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://gitlab.com/Aetherinox"><img src="https://avatars.githubusercontent.com/u/118329232?v=4?s=40" width="40px;" alt="Aetherinox"/><br /><sub><b>Aetherinox</b></sub></a><br /><a href="https://github.com/Aetherinox/marked-alert-fa/commits?author=Aetherinox" title="Code">💻</a> <a href="#projectManagement-Aetherinox" title="Project Management">📆</a> <a href="#fundingFinding-Aetherinox" title="Funding Finding">🔍</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 <br />
 
@@ -293,23 +351,40 @@ See [extensions list](https://github.com/bent10/marked-extensions#packages).
 <br />
 
 <!-- prettier-ignore-start -->
-[link-npm]: https://npmjs.com
-[link-node]: https://nodejs.org
-[link-npmtrends]: http://npmtrends.com/marked-alert-fa
-[link-license]: https://github.com/Aetherinox/marked-alert-fa/blob/master/LICENSE
-[link-package]: https://npmjs.com/package/Aetherinox/marked-alert-fa
-[link-coverage]: https://codecov.io/github/Aetherinox/marked-alert-fa
-[link-build]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/build.yaml?query=workflow%3Abuild.yml
-[link-tests]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/tests.yaml?query=workflow%3Atests.yml
-
-[badge-commit]: https://img.shields.io/github/last-commit/Aetherinox/marked-alert-fa?color=b43bcc
-[badge-size]: https://img.shields.io/github/repo-size/Aetherinox/marked-alert-fa?label=size&color=59702a
-[badge-build]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/build.yml?logo=github&label=Build&color=%23278b30
-[badge-tests]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/tests.yml?logo=github&label=Tests&color=%23278b30
+<!-- BADGE > GENERAL -->
+[link-general-npm]: https://npmjs.com
+[link-general-nodejs]: https://nodejs.org
+[link-npmtrends]: http://npmtrends.com/@aetherinox/marked-alert-fa
+<!-- BADGE > VERSION > GITHUB -->
+[badge-version-gh]: https://img.shields.io/github/v/tag/Aetherinox/marked-alert-fa?logo=GitHub&label=Version&color=ba5225
+[link-version-gh]: https://github.com/Aetherinox/marked-alert-fa/releases
+<!-- BADGE > VERSION > NPMJS -->
+[badge-version-npm]: https://img.shields.io/npm/v/@aetherinox/marked-alert-fa?logo=npm&label=Version&color=ba5225
+[link-version-npm]: https://npmjs.com/package/@aetherinox/marked-alert-fa
+<!-- BADGE > LICENSE -->
+[badge-license-mit]: https://img.shields.io/badge/MIT-FFF?logo=creativecommons&logoColor=FFFFFF&label=License&color=9d29a0
+[link-license-mit]: https://github.com/Aetherinox/marked-alert-fa/blob/main/LICENSE
+<!-- BADGE > BUILD -->
+[badge-build]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/release-npm.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
+[link-build]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/release-npm.yml
+<!-- BADGE > DOWNLOAD COUNT -->
+[badge-downloads-gh]: https://img.shields.io/github/downloads/Aetherinox/marked-alert-fa/total?logo=github&logoColor=FFFFFF&label=Downloads&color=376892
+[link-downloads-gh]: https://github.com/Aetherinox/marked-alert-fa/releases
+[badge-downloads-npm]: https://img.shields.io/npm/dw/%40aetherinox%2Fmarked-alert-fa?logo=npm&&label=Downloads&color=376892
+[link-downloads-npm]: https://npmjs.com/package/@aetherinox/marked-alert-fa
+<!-- BADGE > DOWNLOAD SIZE -->
+[badge-size-gh]: https://img.shields.io/github/repo-size/Aetherinox/marked-alert-fa?logo=github&label=Size&color=59702a
+[link-size-gh]: https://github.com/Aetherinox/marked-alert-fa/releases
+[badge-size-npm]: https://img.shields.io/npm/unpacked-size/@aetherinox/marked-alert-fa/latest?logo=npm&label=Size&color=59702a
+[link-size-npm]: https://npmjs.com/package/@aetherinox/marked-alert-fa
+<!-- BADGE > COVERAGE -->
 [badge-coverage]: https://img.shields.io/codecov/c/github/Aetherinox/marked-alert-fa?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
-[badge-version]: https://img.shields.io/npm/v/Aetherinox/marked-alert-fa
-[badge-downloads]: https://img.shields.io/npm/dm/marked-alert-fa.svg
-[badge-license]: https://img.shields.io/npm/l/marked-alert-fa.svg
-[all-contributors]: https://github.com/all-contributors/all-contributors
-[all-contributors-badge]: https://img.shields.io/github/all-contributors/Aetherinox/marked-alert-fa?color=de1f6f&label=contributors
+[link-coverage]: https://codecov.io/github/Aetherinox/marked-alert-fa
+<!-- BADGE > ALL CONTRIBUTORS -->
+[badge-all-contributors]: https://img.shields.io/github/all-contributors/Aetherinox/marked-alert-fa?logo=contributorcovenant&color=de1f6f&label=contributors
+[link-all-contributors]: https://github.com/all-contributors/all-contributors
+[badge-tests]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/npm-tests.yml?logo=github&label=Tests&color=2c6488
+[link-tests]: https://github.com/Aetherinox/marked-alert-fa/actions/workflows/tests.yml
+[badge-commit]: https://img.shields.io/github/last-commit/Aetherinox/marked-alert-fa?logo=conventionalcommits&logoColor=FFFFFF&label=Last%20Commit&color=313131
+[link-commit]: https://github.com/Aetherinox/marked-alert-fa/commits/main/
 <!-- prettier-ignore-end -->
