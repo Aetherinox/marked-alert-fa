@@ -108,7 +108,7 @@ jobs:
             - name: "👁️‍🗨️ Get Package Version › Print"
               id: task_initialize_package_getversion_debug
               run: |
-                echo "VERSION: ${{ env.PACKAGE_VERSION }}"
+                echo "VERSION: ${{ steps.task_initialize_package_getversion.outputs.PACKAGE_VERSION }}"
 
     # ---------------------------------------------------------------------------------------
     #   JOB > PUBLISH > NPMJS
@@ -533,9 +533,6 @@ jobs:
                 generate_release_notes: false
                 files: |
                   ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
-                  main.js
-                  manifest.json
-                  styles.css
                   SHA256SUMS.txt
                 prerelease: false
                 body: |
@@ -557,9 +554,6 @@ jobs:
                 generate_release_notes: false
                 files: |
                   ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}-rc.${{ inputs.VERSION_RC }}.zip
-                  main.js
-                  manifest.json
-                  styles.css
                   SHA256SUMS.txt
                 prerelease: false
                 body: |
