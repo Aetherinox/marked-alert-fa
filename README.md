@@ -28,7 +28,7 @@ For this package to run, you must have [marked](https://www.npmjs.com/package/ma
 
 You must have some form of Font-Awesome implemented in your project. The easiest way is to install the node package [@fortawesome/fontawesome-free](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
 
-While the original package utilizes SVG paths for the fonts; this package utilizes font-awesome path IDs.
+While the original package utilizes SVG paths for the icons; this package utilizes font-awesome path IDs.
 
 The following icons are utilized by default:
 
@@ -101,11 +101,9 @@ These alerts are similar to the ones utilized on Github:
 
 <br />
 
-To get these icons to display within alerts, utilize [marked](https://www.npmjs.com/package/marked) to convert your markdown. You may use an example similar to the following:
+To get these icons to display within alerts, you need [marked](https://www.npmjs.com/package/marked) installed to convert your markdown. You may use an example similar to the following:
 
 <br />
-
-
 
 ```md
 # Example
@@ -128,7 +126,7 @@ To get these icons to display within alerts, utilize [marked](https://www.npmjs.
 
 <br />
 
-Within your `.js` file, utilize something similar to:
+Within your `.js` file, you can use the below example:
 
 <br />
 
@@ -174,7 +172,7 @@ After marked does its work, you should have the following output::
 
 <br />
 
-You can also include `setOptions` and define other extensions, and call `parse()` separately.
+You can also include `setOptions` and define other extensions:
 
 ```js
 import { Marked } from 'marked';
@@ -200,7 +198,7 @@ import markedAlertFa from '@aetherinox/marked-alert-fa';
 
 ## Options
 
-The `markedAlertFa` extension accepts the same options as [markedAlert](https://www.npmjs.com/package/marked-alert):
+The `marked-alert-fa` extension accepts the same options as [marked-alert](https://www.npmjs.com/package/marked-alert):
 
 - `className`: A string representing a custom CSS class for the alerts.
 - `variants`: An array of alert variants, where each variant is configured with a type, icon, and title class name. This allows you to create different alert types.
@@ -238,7 +236,7 @@ const options = {
 
 <br />
 
-The major different between this package and [markedAlert](https://www.npmjs.com/package/marked-alert) is that the `icon` field accepts only [Font Awesome](https://fontawesome.com/v6/icons?q=note&o=r&m=free) IDs. The reason for this was due to how our software it set up, and the end-user not having the ability to create their own calls in the back-end.
+The major different between this package and [marked-alert](https://www.npmjs.com/package/marked-alert) is that the `icon` field accepts only [Font Awesome](https://fontawesome.com/v6/icons?q=note&o=r&m=free) IDs. The reason for this was due to how our software it set up, and the end-user not having the ability to create their own calls in the back-end.
 
 <br />
 
@@ -252,7 +250,7 @@ Select an icon and copy the font tag to the right of the icon.
 
 <br />
 
-In the example above, you would copy `file-circle-check`, and leave the `fa` off.
+In the example above, copy `file-circle-check`, and leave the `fa` off.
 
 <br />
 
