@@ -74,7 +74,7 @@
       "nyc": "^15.1.0",
       "prettier": "^3.2.5",
       "all-contributors-cli": "^6.26.1",
-      "@types/uuid": "^9.0.8"
+      "@types/uuid": "^10.0.0"
     },
     "config": {
       "commitizen": {
