@@ -94,11 +94,11 @@ jobs:
     cleanup:
         runs-on: ubuntu-latest
         permissions: write-all
-  
+
         steps:
             - name: >-
                 ⚙️ Deployments › Clean
-              uses: strumwolf/delete-deployment-environment@v2
+              uses: Aetherinox/delete-deploy-env-action@v3.0.0
               with:
                   token: ${{ secrets.SELF_TOKEN_CL }}
                   environment: orion
