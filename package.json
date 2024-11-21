@@ -71,7 +71,7 @@
       "react-dom": "^18.2.0",
       "vite-plugin-cachedir": "^1.2.0",
       "vite-plugin-resolve-umd-format": "^1.0.0",
-      "nyc": "^15.1.0",
+      "nyc": "^17.0.0",
       "prettier": "^3.2.5",
       "all-contributors-cli": "^6.26.1",
       "@types/uuid": "^9.0.8"
